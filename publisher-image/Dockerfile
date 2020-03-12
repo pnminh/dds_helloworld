@@ -1,8 +1,8 @@
 # base image to build upon
-FROM nexus-registry-cicd.apps.mario.factory.local/base-image
+FROM registry.redhat.io/ubi7
 
 # pull in Values_publisher executable from Nexus AND give execute permission to running the pub app
-RUN curl -k -u admin:admin --output Values_publisher https://nexus-cicd.apps.mario.factory.local/repository/executables/Values_publisher \ 
+RUN curl -k -u admin:admin --output Values_publisher https://nexus-openshift/repository/executables/Values_publisher \ 
 	&& chmod +x ./Values_publisher \
 	&& yum install -y glibc.i686 iputils
 

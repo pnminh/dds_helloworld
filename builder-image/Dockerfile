@@ -1,7 +1,7 @@
 # Dockerfile for RTI DDS HelloWorld
 
 # pull jenkins agent base image
-FROM default-route-openshift-image-registry.apps.mario.factory.local/cicd/ose-jenkins-agent-base
+FROM registry.redhat.io/openshift4/ose-jenkins-agent-base
 
 # copy RTI DDS framework
 COPY ./rti/rti_connext_dds-5.3.1 /opt/rti_connext_dds
